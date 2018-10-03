@@ -1,12 +1,15 @@
 using System;
+using System.Net.Http;
 
 namespace myApp
 {
     public class ExecutionClient 
     {
-        public static void A() 
+        private readonly HttpClient _client = new HttpClient();
+        public static void StartExecution() 
         {
-            Console.WriteLine(Environment.GetEnvironmentVariable("LINK"));
+            var link = Environment.GetEnvironmentVariable("START_EXECUTION");
+            Console.WriteLine(link);
         }
     }
 }

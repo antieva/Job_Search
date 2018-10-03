@@ -8,9 +8,7 @@ namespace myApp
         static void Main(string[] args)
         {
             DotEnv.Config();
-
-            Console.WriteLine("sdsdsdsd");
-            ExecutionClient.A();
+            ExecutionClient.StartExecution();
         }
     }
 }
