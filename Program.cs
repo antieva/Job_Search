@@ -9,9 +9,11 @@ namespace myApp
         static void Main(string[] args)
         {
             DotEnv.Config();
-            //ExecutionClient.StartExecution();
+            
             ExecutionClient execution = new ExecutionClient();
             ExecutionStatus result = execution.StartExecution<ExecutionStatus>().Result;
+            Console.WriteLine(result.status); 
+            result = execution.CheckExecutionStatus<ExecutionStatus>().Result;
             Console.WriteLine(result.status); 
         }
     }
