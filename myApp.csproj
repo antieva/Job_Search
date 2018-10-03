@@ -6,4 +6,7 @@
   <ItemGroup>
     <PackageReference Include="dotenv.net" Version="1.0.3"/>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
 </Project>

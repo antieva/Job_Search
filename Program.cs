@@ -1,5 +1,6 @@
 ﻿using System;
 using dotenv.net;
+using System.Threading.Tasks;
 
 namespace myApp
 {
@@ -8,7 +9,10 @@ namespace myApp
         static void Main(string[] args)
         {
             DotEnv.Config();
-            ExecutionClient.StartExecution();
+            //ExecutionClient.StartExecution();
+            ExecutionClient execution = new ExecutionClient();
+            ExecutionStatus result = execution.StartExecution<ExecutionStatus>().Result;
+            Console.WriteLine(result.status); 
         }
     }
 }
